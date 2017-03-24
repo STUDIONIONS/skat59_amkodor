@@ -1,0 +1,7 @@
+/vendor/*
+/tmp/*
+/test/*
+/templates/*
+/index.php
+/src/php/config/*
+/composer.lock
