@@ -1,1 +1,2 @@
-# skat59_amkodor 
+# skat59_amkodor
+amkodor skat59
