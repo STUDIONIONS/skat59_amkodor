@@ -16,7 +16,7 @@ module.exports = function(grunt){
 					]
 				},
 				options : {
-					compress: true,
+					compress: false,
 					ieCompat: false
 				}
 			}
@@ -43,7 +43,13 @@ module.exports = function(grunt){
 				files: {
 					'dest/amkodor/assets/templates/leadingpage/js/main.js': [
 						'bower_components/jquery/dist/jquery.js',
-						'bower_components/bootstrap/dist/bootstrap.js',
+						'bower_components/bootstrap/dist/js/bootstrap.js',
+						'bower_components/jquery-mousewheel/jquery.mousewheel.js',
+						'src/amkodor/js/jquery.maskedinput.js',
+						'src/amkodor/js/placeholder.js',
+						'bower_components/hyphernationRUru/dist/jquery.hypher.js',
+						'bower_components/hyphernationRUru/dist/ru-ru.js',
+						'bower_components/fancybox/source/jquery.fancybox.js',
 						'src/amkodor/js/main.js'
 					]
 				}
@@ -69,6 +75,15 @@ module.exports = function(grunt){
 							'src/amkodor/images/*.{png,jpg,gif,svg}'
 						],
 						dest: 'dest/amkodor/assets/templates/leadingpage/images/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'src/amkodor/images/proizvod/*.{png,jpg,gif,svg}'
+						],
+						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/',
 						filter: 'isFile'
 					}
 				]
@@ -117,6 +132,8 @@ module.exports = function(grunt){
 			},
 			amkodor: {
 				src: [
+					'src/amkodor/php/header.php',
+					'src/amkodor/php/config/config.php',
 					'src/amkodor/php/send.php',
 					'test/amkodor/index.php'
 				],
@@ -149,6 +166,7 @@ module.exports = function(grunt){
 			images: {
 				files: [
 					'src/amkodor/images/*.{png,jpg,gif,svg}',
+					'src/amkodor/images/proizvod/*.{png,jpg,gif,svg}',
 					'src/images/css/*.{png,jpg,gif,svg}'
 				],
 				tasks: ['notify:watch', 'newer:imagemin', 'less', 'autoprefixer','notify:done']

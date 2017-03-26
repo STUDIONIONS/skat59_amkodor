@@ -9,6 +9,6 @@
 /gruntfile_test.js
 /node*
 /bower_comp*
-.*
-*.php
-*.txt
+/src/amkodor/php_inc/*
+/src/amkodor/*.txt
+/src/universal/php/*

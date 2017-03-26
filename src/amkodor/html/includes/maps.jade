@@ -1,0 +1,62 @@
+.block__maps
+	.block__maps__wrapper
+		.container-fluid
+			.row.block__title__tail.text-center
+				h2.block__title.text-uppercase.color__c0.col-xs-12 КОНТАКТЫ
+		.container-fluid
+			.row.block__maps__form
+				.col-xs-12
+					.col-xs-12
+						.col-xs-12
+							h3.block__form__title.text-uppercase.text-center
+								| ИЩЕТЕ ВЫГОДНЫЕ УСЛОВИЯ СОТРУДНИЧЕСТВА?
+								br
+								br
+								span.text-uppercase.text-center.color__c1
+									| Обращайтесь только к эксклюзивному дилеру ОАО «АМКОДОР» в Пермском крае
+									br
+									| ООО «СКАТ»
+							p.block__form__description.text-uppercase.text-center РАБОТАТЬ С НАМИ УДОБНО!
+							p
+						.col-md-6.col-md-push-6
+							.block__form
+								form#form_site(action='/', method='post', enctype='application/x-www-form-urlencoded')
+									.row
+										.col-xs-12
+											ul.list__form
+												li Подберем технику АМКОДОР под ваши задачи!
+												li Располагаем собственным складом оригинальных запасных частей!
+												li Ценим время наших клиентов – реагирование в кратчайшие сроки!
+										input#user_name.user_name(type='text', name='user_name', value='')
+										.col-sm-12.block__inputs
+											.input-group
+												span.input-group-addon.glyphicon.glyphicon-user
+												input.form-control.f1(type='text', placeholder='Ваше Имя', name='name')
+												span.glyphicon.form-control-feedback
+											.row
+												.col-sm-6
+													.input-group
+														span.input-group-addon.glyphicon.glyphicon-envelope
+														input.form-control.f2(type='email', placeholder='Ваш Email', name='email')
+														span.glyphicon.form-control-feedback
+												.col-sm-6
+													.input-group
+														span.input-group-addon.glyphicon.glyphicon-earphone
+														input.form-control.f3(type='tel', placeholder='Ваш Телефон', name='phone')
+														span.glyphicon.form-control-feedback
+									.input-group
+										span.input-group-addon.glyphicon.glyphicon-align-justify
+										textarea.form-control.f4(placeholder='Ваше Собщение', name='message')
+									input#api.api(type='hidden', name='api', value='')
+									input#xhr.xhr(type='hidden', name='xhr', value='')
+									.input-group.text-center.pull-right
+										button.btn.btn-primary.f5(type='submit', name='f5')
+											span.glyphicon.glyphicon-send
+											|    ОТПРАВИТЬ
+									.clearfix
+						.col-md-6.col-md-pull-6
+							.block__wrapper__maps
+								.embed-responsive.embed-responsive-16by9.block__maps
+									#map_skat.embed-responsive-item
+						.clearfix
+					.clearfix
