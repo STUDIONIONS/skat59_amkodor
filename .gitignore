@@ -1,7 +1,12 @@
 /vendor/*
 /tmp/*
 /test/*
+/dest/*
 /templates/*
 /index.php
-/src/php/config/*
+/src/php/*
 /composer.lock
+/gruntfile_test.js
+/node*
+/bower_comp*
+.*
