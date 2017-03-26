@@ -138,7 +138,7 @@ var nAgt = navigator.userAgent,
 			}, $.ajax({
 				data: a,
 				type: "POST",
-				url: "/",
+				url: "",
 				success: g,
 				error: h
 			}), !1
