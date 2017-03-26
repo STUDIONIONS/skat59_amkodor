@@ -85,7 +85,25 @@ module.exports = function(grunt){
 						],
 						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/',
 						filter: 'isFile'
-					}
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'src/amkodor/images/proizvod/211/*.{png,jpg,gif,svg}'
+						],
+						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/211/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'src/amkodor/images/proizvod/320/*.{png,jpg,gif,svg}'
+						],
+						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/320/',
+						filter: 'isFile'
+					},
 				]
 			},
 			css: {
@@ -166,7 +184,7 @@ module.exports = function(grunt){
 			images: {
 				files: [
 					'src/amkodor/images/*.{png,jpg,gif,svg}',
-					'src/amkodor/images/proizvod/*.{png,jpg,gif,svg}',
+					'src/amkodor/images/proizvod/**/.{png,jpg,gif,svg}',
 					'src/images/css/*.{png,jpg,gif,svg}'
 				],
 				tasks: ['notify:watch', 'newer:imagemin', 'less', 'autoprefixer','notify:done']

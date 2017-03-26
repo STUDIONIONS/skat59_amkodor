@@ -1822,7 +1822,7 @@ header .navbar .navbar-brand {
     margin-top: -28px;
     margin-bottom: 0;
     position: relative;
-    text-align: left;
+    text-align: center;
     font-family: "playbold";
     font-size: 18px
 }
@@ -1846,14 +1846,14 @@ header .navbar .navbar-brand {
 }
 
 .proizvod__title:before {
-    left: 0;
+    left: 1px;
     border-top: 28px solid transparent;
     border-right: 28px solid #fff;
     border-left: 0
 }
 
 .proizvod__title:after {
-    right: 0;
+    right: 1px;
     border-top: 28px solid transparent;
     border-right: 0;
     border-left: 28px solid #fff
@@ -2185,3 +2185,64 @@ header .navbar .navbar-brand {
         margin-bottom: 5%
     }
 }
+.semob {
+    font-family: "playbold";
+    font-size: 18px;
+}
+div.intro {
+	display: block;
+	width: 100%;
+	max-width: 380px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	dl {
+		display: table;
+		max-width: 100%;
+		width: 100%;
+		margin-bottom: 0px !important;
+		border-bottom: 1px solid #efefef;
+		&:last-child {
+			border-bottom: none;
+		}
+		dd, dt {
+			display: table-cell;
+			vertical-align: bottom;
+			font-weight: 400;
+		}
+		dt {
+			text-align: left;
+			padding-right: 10px;
+			max-width: 220px;
+		}
+		dd {
+			text-align: right;
+		}
+	}
+	
+}
+/*
+dl.dl-horizontal-ps {
+	display: table;
+	dt {
+		float: left;
+		clear: left;
+		text-align: right;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		margin-right: 10px
+	}
+	dd {
+		text-align: right;
+		clear: right;
+		&:before, &:after {
+			display: table;
+			content: "";
+		}
+		&:after {
+			clear: botch;
+		}
+	}
+}
+*/
