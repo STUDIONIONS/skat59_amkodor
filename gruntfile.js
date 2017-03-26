@@ -12,7 +12,7 @@ module.exports = function(grunt){
 			css: {
 				files : {
 					'test/css/amkodor/main.css' : [
-						'src/amkodor/css/main.less'
+						'src/amkodor/less/main.less'
 					]
 				},
 				options : {
@@ -99,13 +99,14 @@ module.exports = function(grunt){
 			amkodor: {
 				options: {
 					pretty: !gc.minifyHtml,
+					basedir: "/",
 					data: {
 						debug: false
 					}
 				},
 				files: {
 					"test/amkodor/index.php": [
-						"src/amkodor/html/amkodor/index.jade"
+						"src/amkodor/html/index.jade"
 					]
 				}
 			}

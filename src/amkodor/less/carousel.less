@@ -1,0 +1,61 @@
+.carousel-wrapper .bg_white {
+	border-bottom: 6px solid #26559B;
+	position: relative
+}
+
+#carousel .carousel-inner {
+	background-image: url("/templates/studionions/images/taytel.png");
+	background-position: 50% 50%;
+	background-attachment: fixed
+}
+
+#carousel .carousel-inner .item img {
+	margin: 0 auto;
+	width: 100%
+}
+
+#carousel .carousel-indicators {
+	background-color: #ffffff;
+	bottom: -10px !important;
+	margin-left: -54px;
+	width: auto;
+	margin-bottom: 0;
+	cursor: default;
+	padding: 8px;
+	z-index: 1000
+}
+
+#carousel .carousel-indicators>li {
+	background-color: #f2f2f2;
+	border: 1px solid #eeeeee;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color=#000000)";
+	-moz-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.6) inset;
+	-webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.6) inset;
+	box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.6) inset
+}
+
+#carousel .carousel-indicators>li.active {
+	background-color: #c5c5c5
+}
+
+#carousel .carousel-indicators:before,
+#carousel .carousel-indicators:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	border-top: 36px solid transparent;
+	border-bottom: 0
+}
+
+#carousel .carousel-indicators:before {
+	border-left: 0;
+	border-right: 36px solid #ffffff;
+	left: -36px
+}
+
+#carousel .carousel-indicators:after {
+	border-right: 0;
+	border-left: 36px solid #ffffff;
+	right: -36px
+}
