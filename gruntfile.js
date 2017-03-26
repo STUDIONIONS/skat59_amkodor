@@ -207,7 +207,7 @@ module.exports = function(grunt){
 			}
 		}
 	});
-	grunt.registerTask('default', 	['notify:watch','newer:imagemin', 'less', 'autoprefixer', 'uglify','jade','concat','notify:done']);
+	grunt.registerTask('default', 	['notify:watch','imagemin', 'less', 'autoprefixer', 'uglify','jade','concat','notify:done']);
 	
 	grunt.registerTask('dev', 		['watch']);
 	
