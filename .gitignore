@@ -5,10 +5,10 @@
 /templates/*
 /templates/*
 /index.php
-/src/php/*
-/src/**/*.txt
 /composer.lock
 /gruntfile_test.js
 /node*
 /bower_comp*
 .*
+*.php
+*.txt
