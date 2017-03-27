@@ -32,7 +32,7 @@ module.exports = function(grunt){
 				src: [
 					'test/css/amkodor/main.css'
 				],
-				dest: 'dest/amkodor/assets/templates/leadingpage/css/'
+				dest: 'assets/templates/leadingpage/css/'
 			}
 		},
 		uglify : {
@@ -41,7 +41,7 @@ module.exports = function(grunt){
 			},
 			main: {
 				files: {
-					'dest/amkodor/assets/templates/leadingpage/js/main.js': [
+					'assets/templates/leadingpage/js/main.js': [
 						'bower_components/jquery/dist/jquery.js',
 						'bower_components/bootstrap/dist/js/bootstrap.js',
 						'bower_components/jquery-mousewheel/jquery.mousewheel.js',
@@ -74,7 +74,7 @@ module.exports = function(grunt){
 						src: [
 							'src/amkodor/images/*.{png,jpg,gif,svg}'
 						],
-						dest: 'dest/amkodor/assets/templates/leadingpage/images/',
+						dest: 'assets/templates/leadingpage/images/',
 						filter: 'isFile'
 					},
 					{
@@ -83,7 +83,7 @@ module.exports = function(grunt){
 						src: [
 							'src/amkodor/images/proizvod/*.{png,jpg,gif,svg}'
 						],
-						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/',
+						dest: 'assets/templates/leadingpage/images/proizvod/',
 						filter: 'isFile'
 					},
 					{
@@ -92,7 +92,7 @@ module.exports = function(grunt){
 						src: [
 							'src/amkodor/images/proizvod/211/*.{png,jpg,gif,svg}'
 						],
-						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/211/',
+						dest: 'assets/templates/leadingpage/images/proizvod/211/',
 						filter: 'isFile'
 					},
 					{
@@ -101,7 +101,7 @@ module.exports = function(grunt){
 						src: [
 							'src/amkodor/images/proizvod/320/*.{png,jpg,gif,svg}'
 						],
-						dest: 'dest/amkodor/assets/templates/leadingpage/images/proizvod/320/',
+						dest: 'assets/templates/leadingpage/images/proizvod/320/',
 						filter: 'isFile'
 					},
 				]
@@ -155,7 +155,7 @@ module.exports = function(grunt){
 					'src/amkodor/php/send.php',
 					'test/amkodor/index.php'
 				],
-				dest: 'dest/amkodor/index.php',
+				dest: 'index.php',
 			}
 		},
 		watch: {
