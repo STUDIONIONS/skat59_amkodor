@@ -1,2 +1,4 @@
-# skat59_amkodor
-amkodor skat59
+# Лединги для ООО «СКАТ» г. Пермь
+[ООО «СКАТ»](https://skat59.ru/)
+
+[http://amkodor.skat59.ru/](Погрузчики АМКОДОР)
