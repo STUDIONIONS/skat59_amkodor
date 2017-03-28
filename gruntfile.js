@@ -16,7 +16,7 @@ module.exports = function(grunt){
 					]
 				},
 				options : {
-					compress: false,
+					compress: true,
 					ieCompat: false
 				}
 			}
@@ -33,6 +33,22 @@ module.exports = function(grunt){
 					'test/css/amkodor/main.css'
 				],
 				dest: 'assets/templates/leadingpage/css/'
+			}
+		},
+		copy: {
+			fonts: {
+				files: [
+					{
+						expand: true,
+						flatten : true,
+						filter: 'isFile',
+						src: [
+							'bower_components/bootstrap/dist/fonts/**',
+							'src/amkodor/fonts/**'
+						],
+						dest: 'assets/templates/leadingpage/fonts/'
+					},
+				]
 			}
 		},
 		uglify : {
@@ -102,6 +118,24 @@ module.exports = function(grunt){
 							'src/amkodor/images/proizvod/320/*.{png,jpg,gif,svg}'
 						],
 						dest: 'assets/templates/leadingpage/images/proizvod/320/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'src/amkodor/images/proizvod/320ce/*.{png,jpg,gif,svg}'
+						],
+						dest: 'assets/templates/leadingpage/images/proizvod/320ce/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'src/amkodor/images/proizvod/332c4/*.{png,jpg,gif,svg}'
+						],
+						dest: 'assets/templates/leadingpage/images/proizvod/332c4/',
 						filter: 'isFile'
 					},
 				]
@@ -177,14 +211,14 @@ module.exports = function(grunt){
 			},
 			css: {
 				files: [
-					'src/amkodor/css/**/*.{css,less}',
+					'src/amkodor/less/**/*.{css,less}',
 				],
 				tasks: ['notify:watch', 'less', 'autoprefixer','notify:done']
 			},
 			images: {
 				files: [
 					'src/amkodor/images/*.{png,jpg,gif,svg}',
-					'src/amkodor/images/proizvod/**/.{png,jpg,gif,svg}',
+					'src/amkodor/images/proizvod/**/*.{png,jpg,gif,svg}',
 					'src/images/css/*.{png,jpg,gif,svg}'
 				],
 				tasks: ['notify:watch', 'newer:imagemin', 'less', 'autoprefixer','notify:done']
@@ -207,7 +241,7 @@ module.exports = function(grunt){
 			}
 		}
 	});
-	grunt.registerTask('default', 	['notify:watch','imagemin', 'less', 'autoprefixer', 'uglify','jade','concat','notify:done']);
+	grunt.registerTask('default', 	['notify:watch', 'copy', 'newer:imagemin', 'less', 'autoprefixer', 'uglify','jade','concat','notify:done']);
 	
 	grunt.registerTask('dev', 		['watch']);
 	
