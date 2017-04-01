@@ -86,57 +86,11 @@ module.exports = function(grunt){
 				files: [
 					{
 						expand: true,
-						flatten : true,
+						cwd: 'src/amkodor/images/',
 						src: [
-							'src/amkodor/images/*.{png,jpg,gif,svg}'
+							'**/*.{png,jpg,gif,svg}'
 						],
-						dest: 'assets/templates/leadingpage/images/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten : true,
-						src: [
-							'src/amkodor/images/proizvod/*.{png,jpg,gif,svg}'
-						],
-						dest: 'assets/templates/leadingpage/images/proizvod/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten : true,
-						src: [
-							'src/amkodor/images/proizvod/211/*.{png,jpg,gif,svg}'
-						],
-						dest: 'assets/templates/leadingpage/images/proizvod/211/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten : true,
-						src: [
-							'src/amkodor/images/proizvod/320/*.{png,jpg,gif,svg}'
-						],
-						dest: 'assets/templates/leadingpage/images/proizvod/320/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten : true,
-						src: [
-							'src/amkodor/images/proizvod/320ce/*.{png,jpg,gif,svg}'
-						],
-						dest: 'assets/templates/leadingpage/images/proizvod/320ce/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten : true,
-						src: [
-							'src/amkodor/images/proizvod/332c4/*.{png,jpg,gif,svg}'
-						],
-						dest: 'assets/templates/leadingpage/images/proizvod/332c4/',
-						filter: 'isFile'
+						dest: 'assets/templates/leadingpage/images/'
 					},
 				]
 			},
